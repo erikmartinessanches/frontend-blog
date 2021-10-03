@@ -1,12 +1,25 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+//import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+import { BrowserRouter, Switch, Route, Link } from 'react-router-dom';
+
+//Importing font for Material UI (MUI).
+import '@fontsource/roboto/300.css';
+import '@fontsource/roboto/400.css';
+import '@fontsource/roboto/500.css';
+import '@fontsource/roboto/700.css';
+import Typography from '@mui/material/Typography';
+
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <Typography>
+        <App />
+      </Typography>
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );
