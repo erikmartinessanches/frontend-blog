@@ -91,6 +91,8 @@ export const Header = () => {
               inputProps={{ 'aria-label': 'search' }}
             />
           </Search>
+
+          <PersonIcon />
           <Button color="inherit">Login</Button>
         </Toolbar>
       </AppBar>
