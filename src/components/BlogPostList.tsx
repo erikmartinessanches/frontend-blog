@@ -1,18 +1,21 @@
 import React from 'react';
-import ts from 'typescript';
 import { BlogPostData } from '../BlogPostData';
 import { BlogPost } from './BlogPost';
 
 //Defining the interface for the component props.
 interface Props {
   data: BlogPostData[];
+  /*Props can be functions, like so. This allows a parent to pass in a function
+  and determine the behavior of the child. Good parenting. 
+  'Render prop.'*/
+  renderItem?: (item: BlogPostData) => JSX.Element; //optional prop
 }
 
-export const BlogPostList = ({ data }: Props) => (
+export const BlogPostList = ({ data, renderItem }: Props) => (
   <ul>
     {data.map((blogpost) => (
       <li key={blogpost.blogPostId}>
-        <BlogPost data={blogpost} />
+        {renderItem ? renderItem(blogpost) : <BlogPost data={blogpost} />}
       </li>
     ))}
   </ul>
