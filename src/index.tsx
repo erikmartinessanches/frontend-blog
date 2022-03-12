@@ -5,7 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import CssBaseline from '@mui/material/CssBaseline';
 
-import { BrowserRouter, Switch, Route, Link } from 'react-router-dom';
+import { BrowserRouter /*, Switch, Route, Link */ } from 'react-router-dom';
 
 //Importing font for Material UI (MUI).
 import '@fontsource/roboto/300.css';
